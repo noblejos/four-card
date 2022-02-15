@@ -1,0 +1,136 @@
+.container {
+  width: 360px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.content {
+  width: 95%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 10px 25px;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+}
+.head-text {
+  text-align: center;
+  padding-top: 10px;
+  top: -100px;
+  display: block;
+  margin-top: 30px;
+}
+.head-text h1 {
+  color: hsl(234, 12%, 34%);
+  margin-top: -3px;
+  font-size: 1.5em;
+}
+.head-text p {
+  color: hsl(229, 6%, 66%);
+  font-size: 0.9em;
+}
+
+.head-text::before {
+  content: "Reliable, efficient delivery";
+  font-size: 1.45em;
+  top: 5px;
+  padding-bottom: -10px;
+  color: hsl(229, 6%, 66%);
+  font-weight: 400;
+}
+
+.boxes {
+  box-sizing: border-box;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.box {
+  box-sizing: border-box;
+  /* padding: 0 20px; */
+  margin-top: 20px;
+  box-shadow: 0px 8px 15px -2px grey;
+  height: 200px;
+}
+.box .text {
+  padding: 0 15px;
+}
+.box h3 {
+  font-size: 1.1em;
+  color: hsl(234, 12%, 34%);
+}
+.box p {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: hsl(229, 6%, 66%);
+}
+
+.box.team {
+  border-top: 5px solid hsl(0, 78%, 62%);
+  border-radius: 5px;
+}
+.box.supervisor {
+  border-top: 5px solid hsl(180, 62%, 55%);
+  border-radius: 5px;
+}
+.box.calculator {
+  border-top: 5px solid hsl(212, 86%, 64%);
+  border-radius: 5px;
+}
+.box.karma {
+  border-top: 5px solid hsl(34, 97%, 64%);
+  border-radius: 5px;
+}
+.box .icon {
+  text-align: right;
+  padding-right: 10px;
+  margin: 20px 10px;
+  display: block;
+  justify-content: end;
+}
+
+.box .icon img {
+  width: 45px;
+}
+
+@media (min-width: 960px) {
+  .container {
+    min-width: 1200px;
+  }
+  .content {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px 5%;
+  }
+  .head-text {
+    width: 50%;
+    margin: 40px auto;
+  }
+  .head-text::before {
+    font-size: 1.85em;
+  }
+  .head-text h1 {
+    font-size: 1.9em;
+  }
+  .boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 20px;
+  }
+  .box {
+    margin-top: 0;
+  }
+  .box.box.team {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+  .box.supervisor {
+    grid-row: 2/4;
+  }
+  .box.karma {
+    grid-row: 3/5;
+    grid-column: 2/3;
+  }
+  .box.calculator {
+    grid-row: 2/4;
+    grid-column: 3/4;
+  }
+}
